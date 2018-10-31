@@ -1,0 +1,59 @@
+table {
+  width: 100%;
+}
+
+.search-input {
+  width: 550px !important;
+  margin-top: 17px !important;
+}
+td.cdk-column-avatar {
+  width: 50px;
+}
+td.cdk-column-name {
+  width: 100%;
+}
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  padding: 0 5px;
+}
+
+.avatar {
+  width: 32px;
+  margin-top: -10px;
+}
+.big-avatar {
+  width: 90px;
+}
+
+.recent-header{
+  height: 75px;
+  margin: 15px 5px 0px 5px !important;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+.hdr-title{
+  position: absolute;
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 40px;
+}
+.num-bonuses {
+  position: absolute;
+  right: 25px;
+}
+.cancel-btn {
+  position: absolute;
+  right: 25px;
+  top: 65px;
+}
+.enroll-btn {
+  position: absolute;
+  right: 137px;
+  top: 65px;
+  background-color: green;
+  color: white
+}
+.usr-department{
+  position: absolute;
+  left: 146px;
+  top: 53px;
+}

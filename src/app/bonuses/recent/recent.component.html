@@ -1,0 +1,57 @@
+
+
+<mat-card class="recent-header">
+  <img class="big-avatar" src="https://cdn4.iconfinder.com/data/icons/user-avatar-flat-icons/512/User_Avatar-31-512.png">
+  <span class="hdr-title">Mary Dysoster</span>
+  <span class="usr-department">Economy department</span>
+
+  <mat-form-field class="num-bonuses">
+    <input type="number" matInput name="points" step="1" placeholder="Bonuses Amount">
+  </mat-form-field>
+
+  <button mat-raised-button class="cancel-btn mat-warn">Cancel</button>
+  <button mat-raised-button class="enroll-btn">Enroll</button>
+</mat-card>
+<mat-form-field class="search-input">
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Type here information for search" >
+</mat-form-field>
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="avatar">
+          <th mat-header-cell *matHeaderCellDef> Avatar </th>
+          <td mat-cell *matCellDef="let element">&nbsp;<img class="avatar" src="https://cdn4.iconfinder.com/data/icons/user-avatar-flat-icons/512/User_Avatar-31-512.png"> </td>
+        </ng-container>
+
+        <!-- UserName Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Full Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="tenrolled">
+          <th mat-header-cell *matHeaderCellDef> Total Enrolled </th>
+          <td mat-cell *matCellDef="let element"> {{element.tenrolled}} </td>
+        </ng-container>
+
+        <!-- EthAddr Column -->
+        <ng-container matColumnDef="treceived">
+          <th mat-header-cell *matHeaderCellDef> Total Received </th>
+          <td mat-cell *matCellDef="let element"> {{element.treceived}} </td>
+        </ng-container>
+
+        <!-- EthAddr Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions to do </th>
+          <td mat-cell *matCellDef="let element">
+
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>

@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+               role="navigation"
+               mode="side" opened>
+    <mat-toolbar>BBS-system</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink='/bonuses'>Manage Bonuses</a>
+      <a mat-list-item routerLink='/transactions'>My Transactions</a>
+      <a mat-list-item routerLink='/forum'>Discussion Forum</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <!--*ngIf="isHandset$ | async">-->
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!--<span>bbsangular</span>-->
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet>
+
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

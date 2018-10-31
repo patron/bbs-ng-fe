@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+td button {
+  margin-right: 5px;
+}
+.search-input {
+  width: 550px !important;
+  margin-top: 17px !important;
+}
+
+

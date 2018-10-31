@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+
+.mat-drawer-content {
+  height: 755px !important;
+}
+
+mat-card .header {
+  margin:0 !important;
+  padding: 25px;
+}
+.yellow {
+  background: #fbf315 !important;
+  color: #000 !important;
+}
+
+.mat-tab-body-content {
+  overflow: hidden !important;
+}
+
+mat-card.card-main {
+  height: 600px ;
+  margin: 20px 20px 0 20px !important;
+  display: block;
+}

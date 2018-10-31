@@ -1,0 +1,62 @@
+<mat-card class="card-main">
+<mat-tab-group>
+  <mat-tab label="Manage Bonuses">
+
+    <mat-form-field class="search-input">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Type here information for search" >
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> # </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} &nbsp;&nbsp;</td>
+      </ng-container>
+
+      <!-- UserName Column -->
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> E-mail </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <!-- EthAddr Column -->
+      <ng-container matColumnDef="ethaddr">
+        <th mat-header-cell *matHeaderCellDef> Etherium Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.ethaddr}} </td>
+      </ng-container>
+
+      <!-- EthAddr Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions to do </th>
+        <td mat-cell *matCellDef="let element"><button mat-mini-fab color="primary">
+          <i class="material-icons">
+            credit_card
+          </i></button>
+          <button mat-mini-fab style="background-color:green">
+            <i class="material-icons">
+              send
+            </i></button>
+          <button mat-mini-fab color="warn">
+            <i class="material-icons">whatshot</i></button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[7, 14]" showFirstLastButtons></mat-paginator>
+  </mat-tab>
+  <mat-tab label="Recent Income">
+<app-recent></app-recent>
+  </mat-tab>
+</mat-tab-group>
+</mat-card>

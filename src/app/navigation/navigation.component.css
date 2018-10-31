@@ -1,0 +1,35 @@
+/* Additional Styles*/
+.mat-nav-list .mat-list-item {
+  color: #fff;
+}
+.mat-drawer {
+  background: #222d32;
+}
+.sidenav .mat-toolbar {
+  background: #fbde01;
+  color: #000;
+}
+.mat-icon-button {
+  color: #000;
+}
+.mat-toolbar.mat-primary {
+  background: #fbf315;
+  color: #000;
+}
+.mat-drawer-side {
+  border: 0;
+}
+
+.mat-list-item.mat-list-item-focus {
+  background: #141b1e;
+  border-left: 2px solid #fbf315;
+}
+ mat-nav-list {
+  width: 174.307px;
+}
+.sidenav[_ngcontent-c1] .mat-toolbar[_ngcontent-c1]{
+  width: 175px;
+}
+.mat-nav-list .mat-list-item {
+  font-size: 14px !important;
+}

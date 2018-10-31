@@ -1,0 +1,37 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.flex-grid-seconds {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.flex-grid-seconds .col {
+  margin-top: 10px;
+  width: 45%;
+  margin-left: 4.5%;
+  margin-right: 4.5%;
+}
+.question-vote-description {
+  display: inline;
+  text-align: right;
+  color: black;
+}
+.question-vote-col-title {
+  text-align: center;
+}
+.icn-valign {
+  vertical-align: middle;
+}
+.arr-element {
+
+}
+.icn-gutter {
+  padding-left: 10px;
+}
