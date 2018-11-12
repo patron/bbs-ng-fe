@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BonusesComponent } from './bonuses/bonuses.component';
-import { TransctionsComponent } from './transactions/transctions.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 import {RouterModule, Routes} from '@angular/router'; // Added manually
 import {CustomMaterialModule} from './core/material.module';
@@ -18,7 +18,7 @@ import 'hammerjs';
 const appRoutes: Routes = [
   { path: '', component: BonusesComponent, data: { title: 'First Component' } },
   { path: 'bonuses', component: BonusesComponent, data: { title: 'Bonuses Management' } },
-  { path: 'transactions', component: TransctionsComponent, data: { title: 'All Transctions' } },
+  { path: 'transactions', component: TransactionsComponent, data: { title: 'All Transctions' } },
   { path: 'forum', component: ForumComponent, data: { title: 'Forum' } }
 ];
 
@@ -27,7 +27,7 @@ const appRoutes: Routes = [
     AppComponent,
     NavigationComponent,
     BonusesComponent,
-    TransctionsComponent,
+    TransactionsComponent,
     ForumComponent,
     RecentComponent,
   ],

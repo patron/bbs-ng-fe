@@ -4,11 +4,11 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-transactions',
-  templateUrl: './transctions.component.html',
-  styleUrls: ['./transctions.component.css']
+  templateUrl: './transactions.component.html',
+  styleUrls: ['./transactions.component.css']
 })
 
-export class TransctionsComponent implements OnInit {
+export class TransactionsComponent implements OnInit {
 
   displayedColumns: string[] = ['transactime', 'bonuses', 'prtaskinfo', 'description'];
   dataSource = new MatTableDataSource<TransactionData>(ELEMENT_DATA);
