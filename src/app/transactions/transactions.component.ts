@@ -1,6 +1,9 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
-
+import {Component, OnInit} from '@angular/core';
+import { UserService } from '../services/user.service';
+import { Observable } from 'rxjs';
+import 'rxjs/observable/of';
+import {DataSource} from '@angular/cdk/collections';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-transactions',
@@ -9,6 +12,25 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 })
 
 export class TransactionsComponent implements OnInit {
+  dataSource = new UserDataSource(this.userService);
+  displayedColumns = ['name', 'email', 'phone', 'company'];
+  constructor(private userService: UserService) { }
+
+  ngOnInit() {
+  }
+}
+
+export class UserDataSource extends DataSource<any> {
+  constructor(private userService: UserService) {
+    super();
+  }
+  connect(): Observable<User[]> {
+    return this.userService.getUser();
+  }
+  disconnect() {}
+}
+
+/*export class TransactionsComponent implements OnInit {
 
   displayedColumns: string[] = ['transactime', 'bonuses', 'prtaskinfo', 'description'];
   dataSource = new MatTableDataSource<TransactionData>(ELEMENT_DATA);
@@ -65,4 +87,4 @@ const ELEMENT_DATA: TransactionData[] = [
   { transactime: 'Jun 06\'18 : 15:39:23', bonuses: '+5', prtaskinfo: 'Project #2 > Task #10' , description: '****** ****** *******'},
   { transactime: 'Jun 06\'18 : 15:39:23', bonuses: '+5', prtaskinfo: 'Project #2 > Task #10' , description: '****** ****** *******'},
 
-];
+];*/

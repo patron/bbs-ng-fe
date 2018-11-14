@@ -12,6 +12,8 @@ import {CustomMaterialModule} from './core/material.module';
 import { ForumComponent } from './forum/forum.component';
 import { RecentComponent } from './bonuses/recent/recent.component';
 import 'hammerjs';
+import {UserService} from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 // Added manualy
@@ -29,7 +31,7 @@ const appRoutes: Routes = [
     BonusesComponent,
     TransactionsComponent,
     ForumComponent,
-    RecentComponent,
+    RecentComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +39,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
-    CustomMaterialModule
+    CustomMaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
