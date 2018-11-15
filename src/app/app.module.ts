@@ -14,6 +14,10 @@ import { RecentComponent } from './bonuses/recent/recent.component';
 import 'hammerjs';
 import {UserService} from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialog} from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
+import { DialogOverviewExampleDialog } from './transactions/transactions.component';
 
 
 // Added manualy
@@ -31,8 +35,10 @@ const appRoutes: Routes = [
     BonusesComponent,
     TransactionsComponent,
     ForumComponent,
-    RecentComponent
+    RecentComponent,
+    DialogOverviewExampleDialog
   ],
+  entryComponents: [DialogOverviewExampleDialog],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -40,9 +46,10 @@ const appRoutes: Routes = [
       appRoutes
     ),
     CustomMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, MatDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
