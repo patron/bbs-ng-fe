@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { MatPaginator, MatTableDataSource} from '@angular/material';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-bonuses',
@@ -20,6 +21,23 @@ export class BonusesComponent implements OnInit {
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
   }
+
+  public someForm: FormGroup;
+
+  constructor () {
+
+    this.someForm = new FormGroup({
+      name: new FormControl(),
+      surname: new FormControl()
+    });
+
+  }
+
+
+  public save() {
+    console.log(this.someForm.value);
+  }
+
 }
 
 export interface UsersElement {

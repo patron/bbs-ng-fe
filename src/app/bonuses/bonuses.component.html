@@ -56,7 +56,28 @@
     <mat-paginator [pageSizeOptions]="[7, 14]" showFirstLastButtons></mat-paginator>
   </mat-tab>
   <mat-tab label="Recent Income">
-<app-recent></app-recent>
+<app-recent>
+</app-recent>
   </mat-tab>
+
+
+  <mat-tab label="Reactive Forms Example">
+
+    <mat-card class="form-card">
+  <form [formGroup]="someForm" class="some-form">
+
+    <mat-form-field class="name-input">
+      <input matInput formControlName="name" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field class="surname-input">
+      <input matInput formControlName="surname" placeholder="Surname">
+    </mat-form-field>
+
+    <button class="form-button" mat-raised-button (click)="save()">See form info</button>
+  </form>
+    </mat-card>
+
+  </mat-tab>
+
 </mat-tab-group>
 </mat-card>

@@ -15,7 +15,7 @@ import 'hammerjs';
 import {UserService} from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialog} from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { DialogOverviewExampleDialog } from './transactions/transactions.component';
 
@@ -47,7 +47,8 @@ const appRoutes: Routes = [
     ),
     CustomMaterialModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UserService, MatDialog],
   bootstrap: [AppComponent]

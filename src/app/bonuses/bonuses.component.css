@@ -8,5 +8,22 @@ td button {
   width: 550px !important;
   margin-top: 17px !important;
 }
-
-
+.form-card {
+  height: 500px;
+}
+.some-form {
+  position: absolute;
+  top: 10px;
+}
+.name-input {
+  position: absolute;
+  top:0px !important;
+}
+.surname-input {
+  position: absolute;
+  top:50px !important;
+}
+.form-button {
+  position: absolute;
+  top:110px !important;
+}
