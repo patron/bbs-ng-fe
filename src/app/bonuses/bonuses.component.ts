@@ -33,9 +33,15 @@ export class BonusesComponent implements OnInit {
 
   }
 
-
+// TODO : do this request by another way
   public save() {
-    console.log(this.someForm.value);
+
+    fetch('demo/api/demandUpdate')
+      .then(dataWrappedByPromise => dataWrappedByPromise.json()).then(data => {
+        // you can access your data here
+        console.log(data);
+      })
+      .catch( alert );
   }
 
 }
